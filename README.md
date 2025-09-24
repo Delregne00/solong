@@ -1,4 +1,6 @@
-# 🎮 so_long
+<div align="center">
+
+# so_long
 
 **A 2D isometric tile-based game developed in C as part of the 42 School curriculum**
 
@@ -8,7 +10,7 @@
 
 </div>
 
-## 🎬 Demo
+## Demo
 <div align="center">
 
 ![so_long gameplay](demo/demo.gif)
@@ -19,30 +21,32 @@
 
 ---
 
-## 🎯 Objective
+## Objective
 
 Navigate through the map, collect all collectibles (`C`), and reach the exit (`E`) while avoiding patrolling enemies. The game features an **isometric view** with smooth animations and **intelligent enemy AI**.
 
 ---
 
-## 🕹️ Controls
+## Controls
 
 <div align="center">
 
 | Key | Action | Key | Action |
 |:---:|:------:|:---:|:------:|
-| **W** / **↑** | Move Up | **A** / **←** | Move Left |
-| **S** / **↓** | Move Down | **D** / **→** | Move Right |
-| **ESC** | Exit Game | | |
+| **W** | Move Up | **A** | Move Left |
+| **S** | Move Down | **D** | Move Right |
+| **↑** | Move Up | **←** | Move Left |
+| **↓** | Move Down | **→** | Move Right |
+| **ESC** | Exit Game | **Q** | Exit Game |
 
 </div>
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 <details>
-<summary><b>📋 Prerequisites</b></summary>
+<summary><b>Prerequisites</b></summary>
 
 - **MLX42** graphics library
 - **Make** build system
@@ -66,7 +70,7 @@ cmake --build build -j4
 
 > **Note**: Make sure MLX42 is either installed system-wide or the path in the Makefile points to your local MLX42 build directory.
 
-### 🔧 Build & Run
+### Build & Run
 
 ```bash
 # Clone the repository
@@ -82,7 +86,7 @@ make
 
 ---
 
-## 🗺️ Map Format
+## Map Format
 
 Maps use the `.ber` extension with the following elements:
 
@@ -99,7 +103,7 @@ Maps use the `.ber` extension with the following elements:
 
 </div>
 
-### ✅ Map Requirements
+### Map Requirements
 
 <table>
 <tr>
@@ -126,12 +130,12 @@ Maps use the `.ber` extension with the following elements:
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 The project implements a **modular architecture** centered around the `t_game` structure that coordinates between five specialized subsystems:
 
 <details>
-<summary><b>🔧 Core Data Structures</b></summary>
+<summary><b>Core Data Structures</b></summary>
 
 ### **t_game** - Central game state coordinator
 - Map data and player position tracking
@@ -166,7 +170,7 @@ The project implements a **modular architecture** centered around the `t_game` s
 </details>
 
 <details>
-<summary><b>🎨 Rendering Pipeline</b></summary>
+<summary><b>Rendering Pipeline</b></summary>
 
 The graphics system implements a sophisticated **isometric rendering pipeline**:
 
@@ -178,7 +182,7 @@ The graphics system implements a sophisticated **isometric rendering pipeline**:
 </details>
 
 <details>
-<summary><b>🤖 Enemy AI System</b></summary>
+<summary><b>Enemy AI System</b></summary>
 
 The enemy subsystem implements **autonomous patrolling behavior**:
 
@@ -190,7 +194,7 @@ The enemy subsystem implements **autonomous patrolling behavior**:
 </details>
 
 <details>
-<summary><b>⌨️ Input Processing</b></summary>
+<summary><b>Input Processing</b></summary>
 
 The input system handles **real-time player interaction** through:
 
@@ -203,15 +207,15 @@ The input system handles **real-time player interaction** through:
 
 ---
 
-## 🚀 Performance & Quality
+## Performance & Quality
 
-### ⚡ Performance Optimizations
+### Performance Optimizations
 - **-Ofast** compiler optimization for maximum performance
 - Efficient sprite caching and memory management
 - Optimized rendering pipeline for smooth 60fps gameplay
 - Smart enemy update cycles to reduce CPU overhead
 
-### 🧪 Testing and Validation
+### Testing and Validation
 The project includes comprehensive validation:
 - Map format verification
 - Accessibility checking (ensuring all collectibles are reachable)
@@ -221,14 +225,14 @@ The project includes comprehensive validation:
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 For detailed technical documentation about the implementation:
 
 **[Complete Technical Wiki](https://deepwiki.com/Delregne00/solong/1-overview)**
 
 <details>
-<summary><b>📖 The wiki covers:</b></summary>
+<summary><b>The wiki covers:</b></summary>
 
 - Detailed architecture and system relationships
 - Core game system implementation
@@ -241,7 +245,7 @@ For detailed technical documentation about the implementation:
 
 ---
 
-## 🛠️ Built With
+## Built With
 
 <table>
 <tr>
@@ -265,7 +269,7 @@ For detailed technical documentation about the implementation:
 
 ---
 
-## 📁 Development Environment
+## Development Environment
 
 ### Project Structure
 ```
@@ -289,11 +293,11 @@ make re		  # Rebuild everything from scratch
 
 ---
 
-## ⭐ Key Features
+## Key Features
 
 <div align="center">
 
-**🎮 Smooth Gameplay** • **🎨 Isometric Graphics** • **🤖 Intelligent AI** • **📊 Performance Monitoring** • **🗺️ Map Validation** • **🧠 Memory Management**
+**Smooth Gameplay** • **Isometric Graphics** • **Intelligent AI** • **Performance Monitoring** • **Map Validation** • **Memory Management**
 
 </div>
 
@@ -322,7 +326,7 @@ make re		  # Rebuild everything from scratch
 
 ---
 
-## ✅ 42 School Requirements
+## 42 School Requirements
 
 This project fulfills **all requirements** for the **so_long** project at 42 School:
 
@@ -345,6 +349,6 @@ This project fulfills **all requirements** for the **so_long** project at 42 Sch
 
 <div align="center">
 
-**🎓 Developed by [Delregne00] as part of the 42 School curriculum**
+**Developed by [Delregne00] as part of the 42 School curriculum**
 
 </div>
