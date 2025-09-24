@@ -23,9 +23,27 @@ Navigate through the map, collect all collectibles (`C`), and reach the exit (`E
 ## Installation
 
 ### Prerequisites
+
 - **MLX42** graphics library
 - **Make** build system
 - **GCC** compiler
+- **CMake** (for MLX42 compilation)
+
+### MLX42 Installation
+
+```bash
+# Clone MLX42 library
+git clone https://github.com/codam-coding-college/MLX42.git
+cd MLX42
+
+# Build the library
+cmake -B build
+cmake --build build -j4
+
+# Install (optional, or link directly in your Makefile)
+```
+
+**Note**: Make sure MLX42 is either installed system-wide or the path in the Makefile points to your local MLX42 build directory.
 
 ### Build
 ```bash
@@ -67,7 +85,7 @@ The project implements a modular architecture centered around the `t_game` struc
 
 **t_game** - Central game state coordinator containing:
 - Map data and player position tracking
-- Sprite management and animation systems  
+- Sprite management and animation systems
 - MLX instance and rendering context
 - Move counter and game completion status
 
@@ -85,7 +103,7 @@ The project implements a modular architecture centered around the `t_game` struc
 
 **t_tomb** - Animation controller handling:
 - Frame sequencing for character animations
-- Frame counter for timing synchronization  
+- Frame counter for timing synchronization
 - State-based animation transitions
 - Sprite cycling for dynamic visual effects
 
@@ -100,7 +118,7 @@ The project implements a modular architecture centered around the `t_game` struc
 The graphics system implements a sophisticated isometric rendering pipeline:
 
 1. **Coordinate Transformation**: Cartesian grid coordinates are converted to isometric screen positions using matrix transformations
-2. **Depth Sorting**: Sprites are rendered back-to-front based on their grid position to ensure proper visual layering  
+2. **Depth Sorting**: Sprites are rendered back-to-front based on their grid position to ensure proper visual layering
 3. **Animation Management**: Multi-frame sprites are cycled through their animation sequences with precise timing control
 4. **Collision Visualization**: Real-time collision boundaries are calculated and can be toggled for debugging
 
@@ -118,7 +136,7 @@ The enemy subsystem implements autonomous patrolling behavior:
 The input system handles real-time player interaction through:
 
 - **Event Capture**: MLX42 key events are captured and processed through the main game loop
-- **Movement Validation**: Each input is validated against map boundaries and collision detection before execution  
+- **Movement Validation**: Each input is validated against map boundaries and collision detection before execution
 - **State Updates**: Player position, animation state, and game statistics are updated atomically
 - **Exit Conditions**: Game completion logic is triggered when all collectibles are gathered and exit is reached
 
@@ -163,27 +181,27 @@ The wiki covers:
 ### Project Structure
 ```
 solong/
-├── src/                    # Core game source files
-├── includes/               # Header files and definitions
-├── maps/                   # Game level files (.ber format)
-├── assets/                 # Sprites and game resources
-├── libft/                  # Custom utility library
-├── demo/                   # Gameplay videos and screenshots
-└── Makefile               # Build configuration
+├── src/					# Core game source files
+├── includes/				# Header files and definitions
+├── maps/					# Game level files (.ber format)
+├── assets/					# Sprites and game resources
+├── libft/					# Custom utility library
+├── demo/					# Gameplay videos and screenshots
+└── Makefile			   # Build configuration
 ```
 
 ### Build Targets
 ```bash
-make          # Build the main executable
-make clean    # Remove object files
+make		  # Build the main executable
+make clean	  # Remove object files
 make fclean   # Full clean (remove all generated files)
-make re       # Rebuild everything from scratch
+make re		  # Rebuild everything from scratch
 ```
 
 ## Key Features
 
 - **Smooth Gameplay**: 60fps with responsive controls
-- **Isometric Graphics**: 2D sprites rendered in isometric perspective  
+- **Isometric Graphics**: 2D sprites rendered in isometric perspective
 - **Intelligent AI**: Enemies with patrol patterns and collision detection
 - **Performance Monitoring**: Move counter and completion tracking
 - **Map Validation**: Comprehensive error checking and validation
