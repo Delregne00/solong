@@ -222,3 +222,4 @@ This project fulfills all requirements for the **so_long** project at 42 School:
 ---
 
 *Developed by [Delregne00] as part of the 42 School curriculum*
+ # Añade una línea vacía al final
